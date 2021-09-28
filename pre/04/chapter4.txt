@@ -1,0 +1,16 @@
+1.
+No, I wug.
+You wugga wug.
+I wug.
+
+ping creates a period and new line.
+baffle says wug then a period and new line.
+
+2.
+main [print["No, I "] zoop]
+zoop [baffle]
+baffle [print["wug "] ping]
+ping [println["."]]
+
+3.
+If there is baffle at the end of ping then the method will never finish.
