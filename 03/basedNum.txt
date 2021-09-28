@@ -1,0 +1,44 @@
+Kevin Cheng
+APCS
+HW03 -- Revised Binary Algorithm
+2021-09-23
+
+0. The base of a number system is how many symbols that can represent values for that number system in each digit place. For example, in base 10, better known as decimal,
+   there are ten different symbols (0 1 2 3 4 5 6 7 8 9) that represent different values in every decimal place in the number. In addition, just like how there are tens
+   and hundreds and more decimal places, there are x^1 and x^2 digit places and more for a number in base x.
+
+1. Binary is base 2, and usually you will see numbers written in binary with 1 and 0s. The binary number system is important because there are only two values: having only
+   0s or 1s is the same as having a true or false system, which is very simple to replicate with the presence or absense of an electrical signal in a computer transistor.
+
+2. First, starting from the leftmost digit, add it into a number which will be called the "total sum". Multiply the total sum by 2 and then add the digit to the right. 
+   Keep repeating the step in the previous sentence until you have added every digit in the binary number. 
+
+   The process should look similar to this:
+
+     100111010: 1
+	   *2 + 0 (the subsequent digit) = 2
+	   *2 + 0 = 4
+	   *2 + 1 = 9
+	   *2 + 1 = 19
+	   *2 + 1 = 39
+	   *2 + 0 = 68
+	   *2 + 1 = 137
+	   *2 + 0 = 274, stop
+
+   Therefore, 100111010 in binary is equal to 272 in decimal.
+
+3. First, check if the decimal number is equal to 0 mod 2 or 1 mod 2. If the number is 0 mod 2, record the 0 and divide the decimal by 2. If the number is 1 mod 2, record a
+   1, subtract the number by 1 and then divide by 2. For subsequent repetitions of the process, record the 0 or 1 to the left of the digits you are recording. Repeat the
+   previous steps until the decimal number is equal to 0.
+
+   The process should look similar to this:
+
+	274 = 0 mod 2, 272/2 = 137, record 0
+	137 = 1 mod 2, 136/2 = 68, record 10
+	68 = 0 mod 2, 68/2 = 39, record 010
+	39 = 1 mod 2, 38/2 = 19, record 1010
+	19 = 1 mod 2, 18/2 = 9, record 11010
+	9 = 1 mod 2, 8/2 = 4, record 111010
+	4 = 0 mod 2, 4/2 = 2, record 0111010
+	2 = 0 mod 2, 2/2 = 1, record 00111010
+	1 = 1 mod 2, 0/2 = 0, record 100111010, stop
