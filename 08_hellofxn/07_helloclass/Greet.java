@@ -5,12 +5,17 @@ public class Greet {
 		String name;
 		Scanner Sname = new Scanner(System.in);
 		System.out.println("What is your name?");
-		name = Sname.nextString();
+		name = Sname.nextLine();
 
 		System.out.print("Greetings, ");
 		System.out.println(name);
 	}
+
 	public static void main(String[] args) {
 		greet();
+
+		System.out.println("Hello to Dr.Zi,");
+		System.out.println("Hello to A.F.,");
+		System.out.println("And hello to you too");
 	}
 }
