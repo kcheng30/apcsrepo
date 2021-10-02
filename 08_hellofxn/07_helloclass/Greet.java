@@ -1,3 +1,16 @@
+//*
+Kevin Cheng
+APCS
+HW08 -- Refactor Freshie Zero
+2021-09-30
+
+DISCOVERIES
+Rediscovered how to use the Scanner class
+
+UNRESOLVED QUESTIONS
+How do I get one name to come out instead of all three at the same time?
+*/
+
 import java.util.Scanner;
 
 public class Greet {
