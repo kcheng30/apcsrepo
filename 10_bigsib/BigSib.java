@@ -1,5 +1,5 @@
 //*
-Frog Hats - Oscar Breen, Diana Akhmedova + Narwhal, Kevin Cheng + Frog Hat
+Frog Hats: Oscar Breen, Diana Akhmedova + Narwhal, Kevin Cheng + Frog Hat
 APCS
 HW10 - Refactor Big Sib One
 2021-10-04
