@@ -1,4 +1,4 @@
-//*
+/*
 Kevin Cheng
 APCS
 HW08 -- Refactor Freshie Zero
