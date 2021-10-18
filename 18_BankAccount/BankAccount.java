@@ -13,10 +13,10 @@
  * Is it necessary for the new Bank Account classes to be static for them to be executed?
  *
  * Q2:
- * 
+ * We know that java provides a default constructor because the value of variables that haven't had their variables defined yet is 0 or an empty string. 
  *
  * Q3:
- *
+ * There is a toString method because there is always a System.out.print method, which returns a string as their output, which would require a toString method. 
  *
  */
 
