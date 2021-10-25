@@ -65,14 +65,12 @@ public class Coin {
                 System.out.println(name + " -- " + upFace);
         }
 
-        public boolean equals(Coin other) {
+        public void equals(Coin other) {
                 if (other.upFace == upFace) {
                         System.out.println("Match. Firestarter you may be.");
-			return true;
                 } else {
                         System.out.println("No match. Firestarter you can not be.");
                 }
-		return false;
         }
 
         public void assignValue() {
