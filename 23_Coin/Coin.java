@@ -1,3 +1,17 @@
+/* Kevin Cheng, Oscar Breen
+ * APCS
+ * HW23: What Does Equality Look Like?
+ * 2021-10-24
+ * Time Spent: 51 minutes
+ *
+ * DISCO:
+ * You can reference a class from inside the same class.
+ * How to use the Random class.
+ *
+ * QCC:
+ * none
+ */
+
 import java.util.Random;
 
 public class Coin {
