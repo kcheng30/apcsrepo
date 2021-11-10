@@ -1,3 +1,18 @@
+/*
+ * Team Frog Hats -- Kevin Cheng, Marcus Wu, Neil Lin
+ * APCS
+ * HW31 -- Otnay Ybay ethay Airhay Onway Ymay Inneechay Inchay Inchay
+ * 2021-11-9
+ *
+ * DISCO: 
+ * A recursion format that works for these kinds of methods
+ *
+ * QCC:
+ * How are these going to be used in a pig latin translator?
+ * What extra rules are going to be in the pig latin translator that aren't accounted for with these methods?
+ */
+
+
 public class Pig {
 	private static final String vowels = "aeiou";
 
