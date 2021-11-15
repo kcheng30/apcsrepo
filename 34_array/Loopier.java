@@ -1,3 +1,22 @@
+/**
+Team Frog Hats
+Jacob Ng, Kevin Cheng, and Hamim Seam
+APCS
+HW34 -- A Pirate's Life for Me
+2021-11-14
+time spent: 2 hours
+**/
+
+/**
+Disco
+-When you System.out.print an array, java prints the memory code.
+-When you create an array while also putting elements in it at initilization, you don't need new.
+QCC
+-Why would we make a recursive version of an indexOf() method?
+-Is there a way to get a subarray of an array without using Arrays.copyOfRange?
+-java visualizers are very helpful for recursions.
+**/
+
 import java.util.Random;
 import java.util.Arrays;
 
