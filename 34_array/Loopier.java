@@ -41,18 +41,20 @@ public class Loopier {
 	public static int linSearch(int[] a, int target) { 
 		int index = 0;
 		for ( int num : a ) {
-			if ( num == target ) return index0;
+			if ( num == target ) return index;
 			index++;
 		return -1;
+		}
 	}
 
 	public static int linSearchR(int[] a, int target) {
 		int index = 0;
-		if ( a.length == 0 ) return -1;
-		int recurse = linSearchR(Arrays.copyOfRange(a, 1, a.length), target);
-		if ( a[0] == target ) return index;
-		if ( recurse != -1 ) return index += recurse + 1;
-		else return = -1;
+		if ( a.length > 0 ) {
+			int recurse = linSearchR(Arrays.copyOfRange(a, 1, a.length), target);
+			if ( a[0] == target ) return index;
+			if ( recurse != -1 ) return index += recurse + 1;
+		}
+		return -1;
 	}
 
 	public static int freq(int[] a, int target) {
