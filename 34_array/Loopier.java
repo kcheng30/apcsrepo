@@ -1,3 +1,22 @@
+/**
+Team Frog Hats
+Jacob Ng, Kevin Cheng, and Hamim Seam
+APCS
+HW34 -- A Pirate's Life for Me
+2021-11-14
+time spent: 2 hours
+**/
+
+/**
+Disco
+-When you System.out.print an array, java prints the memory code.
+-When you create an array while also putting elements in it at initilization, you don't need new.
+QCC
+-Why would we make a recursive version of an indexOf() method?
+-Is there a way to get a subarray of an array without using Arrays.copyOfRange?
+-java visualizers are very helpful for recursions.
+**/
+
 import java.util.Random;
 import java.util.Arrays;
 
@@ -19,23 +38,21 @@ public class Loopier {
 		return sList + "}";
 	}
 
-	public static int linSearch(int[] a, int target) {
-		int index = 0; 
+	public static int linSearch(int[] a, int target) { 
+		int index = 0;
 		for ( int num : a ) {
 			if ( num == target ) return index;
 			index++;
-		}
 		return -1;
+		}
 	}
 
 	public static int linSearchR(int[] a, int target) {
 		int index = 0;
 		if ( a.length > 0 ) {
+			int recurse = linSearchR(Arrays.copyOfRange(a, 1, a.length), target);
 			if ( a[0] == target ) return index;
-			if ( linSearchR(Arrays.copyOfRange(a, 1, a.length), target) != -1 ) {
-				index++;
-				return index += linSearchR(Arrays.copyOfRange(a, 1, a.length), target);
-			}
+			if ( recurse != -1 ) return index += recurse + 1;
 		}
 		return -1;
 	}
