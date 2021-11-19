@@ -1,0 +1,80 @@
+Debugging
+
+	Three kinds of errors:
+		Compile time - Syntax issues that mean the "compiler can't read the code properly"
+		Runtime - The program produces an errow hile running, like an array index error
+		Logic - The program returns unintended results. 
+
+
+	Compile Time:
+		
+		Incremental development can be done to minimize the need for debugging. This is when you add code
+		little by little and check for issues often. Errors will be easy to locate. 
+
+		Errors can cause a cascade of errors, so 1 error can turn into 10 error messages. Nevertheless,
+		fix 1 at a time. 
+
+		Read error messages carefully to try to understand some of what the compiler is trying to say to
+		you. Syntax errors may cause errors at locations different than where the compiler found the
+		error. These syntax errors include
+			Nested parentheses,
+			Case sensitivity, 
+			Semicolons only after statements, 
+			Double quoted strings/single quoted chars,
+			Incorrect variable type assignment,
+			Proper method invocation (proper variable types provided),
+			Returnless void methods, 
+			Invoking constructors with the proper objects, 
+			Referencing objects in static contexts
+
+		Ensure you are using the proper file, proper runtime environment, and if the program still
+		doesn't work, cut your code in hald and use repeated halves to find the source of the error.
+		Compiler advice is broad and generally unhelpful. 
+
+	
+	Runtime:
+		Programs may hang - to take a long time to return an output. These are often caused by infinite
+		loops, and can be diagnosed using System.out.print statements. There may also be StackOverflow
+		errors, which indicate the same thing as hanging programs but with infinite recursion. Always
+		check for base cases and see if the method can reach the base case by using System.out.print
+		statements to "check" what the parameters of recursion look like. This can also be done to check
+		flow of execution, which is when and in what order are methods invoked and in what order. 
+
+		Exceptions may occur if objects are improperly defined. These include:
+			Null,
+			Array out of bounds, 
+			File not found,
+			Arithmetic errors
+
+		Too many print statements may cause clutter and make debugging more cumbersome than simple. Make
+		the code easier to read, and reorganize accordingly in order to easier locate errors, such as by
+		splitting up large methods or testing nested methods individually. Finding the simplest test that
+		causes an error is commonly a way to quickly locate what the error is.
+
+
+	Logic errors:
+		The compiler and interpreter return no information. Debugging logic errors commonly requires a
+		solid understanding of each mechanism in your code. 
+
+		The first step in fixing a logic error is making a connection between the code and the result of
+		the code. Usually, the code is doing something that shouldn't be happening, so your job is to
+		find out what is happening that shouldn't be. If you have some sort of model that doesn't reflect
+		what the code is doing, then there is either an issue with the model itself or the translation
+		from model to code. Some of these mistakes in translation may include:
+			Integer division, 
+			Floating point number inaccuracy, 
+			== vs. .equals, 
+			Running inherited code,
+			print not printing until there is a println
+
+		Large expressions may be difficult to debug because they have many components, where any one
+		single component can break the whole statement. Breaking this up into many smaller components can
+		make them more readable and easier to debug with more individual parts to work with. Order of
+		operations can also cause some errors, so use of parentheses can help to clear up some ambiguity.
+
+		Using intermediate variables instead of one long expression can make debugging easier by going
+		through and checking each individual variable, then tracing back how that variable could have
+		gone wrong. 
+
+		If you can't find the solution by yourself, it may help to sit back and relax for a bit or have
+		someone else do it so you don't get too frustrated at it by yourself. 
