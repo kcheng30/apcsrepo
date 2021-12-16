@@ -1,5 +1,5 @@
 /**
-Frog Hats = Kevin Cheng, Hamim Seam, Jacob Ng
+Frog Hats - Kevin Cheng, Hamim Seam, Jacob Ng
 APCS 
 HW48 - Halving the Halves
 2021-12-15
@@ -29,20 +29,19 @@ public class BinSearch
 
   public static int binSearchRec( Comparable[] a, Comparable target, int lo, int hi )
   {
-
     int tPos = -1; //init return var to flag value -1
     int m = (lo + hi) / 2; //init mid pos var
     int comparison = a[m].compareTo( target );
-	  
-    if ( lo != hi ) {
-      if ( comparison == 0 )
-        return m;
-      else if ( comparison < 0 )
-        binSearchRec( a, target, m + 1, hi );
-      else if ( comparison > 0 )
-        binSearchRec( a, target, lo, m - 1 );
+
+    if ( comparison == 0 )
+      return m;
+    else if ( lo != hi ) {
+      if ( comparison < 0 )
+	lo = m + 1;
+      else
+	hi = m - 1;
+      return binSearchRec( a, target, lo, hi );
     }
-	  
     return tPos;
   }//end binSearchRec
 
@@ -53,7 +52,7 @@ public class BinSearch
     int tPos = -1; //init return var to flag value -1
     int m = (lo + hi) / 2; //init mid pos var
 
-    while( lo != hi ) { // run until lo & hi cross
+    while ( lo != hi ) { // run until lo & hi cross
 
       int comparison = a[m].compareTo( target );
       m = ( lo + hi ) / 2;//update mid pos var
@@ -118,7 +117,7 @@ public class BinSearch
     Comparable[] iArr2 = { 2, 4, 6, 8, 13, 42 };
     printArray( iArr2 );
     System.out.println( "iArr2 sorted? -- " + isSorted(iArr2) );
-    Comparable[] iArr3 = new Integer[10000];
+    Comparable[] iArr3 = new Integer[10];
     for( int i = 0; i < iArr3.length; i++ ) {
     iArr3[i] = i * 2;
     }
