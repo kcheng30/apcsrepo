@@ -1,4 +1,10 @@
 /**
+Frog Hats = Kevin Cheng, Hamim Seam, Jacob Ng
+APCS 
+HW48 - Halving the Halves
+2021-12-15
+Time spent - .4 hours
+
    class BinSearch
    Binary search on array of Comparables
 **/
