@@ -1,15 +1,19 @@
-// Clyde "Thluffy" Sinclair
-// APCS pd0
+// Team Frog Hats - Jacob Ng, Kevin Cheng, Hamim Seam
+// APCS pd8
 // HW51 -- implementing bubblesort
 // 2022-01-04t
-// time spent:  hrs
+// time spent: 1 hrs
 
 /******************************
  * class BubbleSort -- implements bubblesort algorithm (vanilla)
  *
  * ALGO:
+ * For an array of length n,
+ * There should be n-1 passes. In each pass:
+ * Starting from the rightmost thing, if it's less than the thing to the left, swap the two and repeat for every element up to and including the second to last one from the left.
  * 
  * DISCO
+ * Because of the attributes of Bubble Sort (in the questions below), for the mth pass of an array of length n, only n-m comparisons need to be made.
  *
  * QCC
  * q0: If a pass requires no swaps, what do you know?
