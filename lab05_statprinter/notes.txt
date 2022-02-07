@@ -1,0 +1,33 @@
+Team FrogHats : Prattay Dey, Tasnim Chowdhury, Kevin Cheng
+APCS pd8
+L05 -- pulling it together
+2022-02-03
+time spent: 2.0 hrs
+
+
+DISCO
+------------------------------------------------
+* Rediscovered how to use an ArrayList
+* Converting into double to divide ints
+================================================
+
+
+QCC
+------------------------------------------------
+* 
+================================================
+
+
+MISC
+------------------------------------------------
+Q5 Plan:
+The longest bar with length x represents y
+frequency, so there will be about x/y tallies
+for every 1 data.
+
+Find what x/y is and multiply it by the total
+number of datas and turn that into a length of
+tallies for every value in _frequency. 
+================================================
+
+
