@@ -206,12 +206,14 @@ public class Review {
 
   public static String fakeReview ( String fileName ) {
 	  String review = textToString(fileName);
+	  String fakeReview = "";
 	  ArrayList<String> reviewWords = stringToList(review);
 	  for ( int i = 0; i < reviewWords.size(); i++ ) {
 		  String word = reviewWords.get(i);
 		  if ( word.charAt(0) == '*' ) 
 			  reviewWords.set( i, "adjective" );
+		  fakeReview += word + " ";
 	  }
-	  return reviewWords;
+	  return fakeReview;
   }
 }
