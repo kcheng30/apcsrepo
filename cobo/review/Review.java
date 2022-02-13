@@ -146,7 +146,7 @@ public class Review {
   {
     String review = textToString(fileName);
     String ans = "";
-    float total = totalSentiment(review);
+    double total = totalSentiment(review);
 
     for(int i = 0; i < review.length()-1; i++) {
       if(review.substring(i, i+1).equals("*")) {

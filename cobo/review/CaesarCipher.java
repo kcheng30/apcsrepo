@@ -2,15 +2,18 @@
  * 
  * A Caesar Cipher takes a message, and shifts every letter in the same amount. For example, "holy"
  * shifted 23 gives a message of "eliv" after moving every letter down 23 spaces.
+ *
  * 1.
  * We chose to implement this because it's not too hard and the concept is similar to finding sentiment
  * values for every word. 
+ *
  * 2.
  * The main problem in this program is finding what letter to replace the old letter. We got the idea to
  * put the alphabet into a string, and using indexOf to find the "numerical value" of every letter in the
  * initial message (a -> 1, b -> 2... ). To allow capitalized letter to also get shifted, we made a second
  * string with all the capital letters and combined that with the LetterNumber because the letters would
- * maintain the same numerical value. 
+ * maintain the same numerical value.
+ *
  * 3.
  * public static String
  * There needed to be a message and the change to that message, which is a string and an int required as
@@ -19,8 +22,8 @@
 
 public class CaesarCipher {
 
-	final String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
-	final String CAPSALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	final static String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
+	final static String CAPSALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	
 	
 	public static String encrypt ( String message, int shift ) {
