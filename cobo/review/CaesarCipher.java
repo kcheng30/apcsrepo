@@ -50,4 +50,5 @@ public class CaesarCipher {
 		String message = "hOlY, HoLy";
 		System.out.println( encrypt( message, 23 ) );
 		System.out.println( "Should return eLiV, ElIv" );
+	}
 }
