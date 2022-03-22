@@ -1,0 +1,119 @@
+The Real Three Kevins (Kevins Li, Xiao, Chen)
+APCS
+Elevens lab
+Time spent : 3 hours
+
+DISCO:
+
+Collegeboard dumb (but we already knew this)
+Assertion statements cool.
+
+QCC:
+
+Why touch grass when you can code for APCS?
+What is the meaning of life.
+
+
+Activity 2
+
+1. A deck is a list of individual cards, almost like how a herd is a group of animals.
+2. The deck contains 6 elements because there will be a different suitfor every single rank value, and since there are 3 rank values and 2 suits,
+there will be 6 total card elements.
+3. Ranks = two, three, four, five, six, seven, eight, nine, ten, jacks, queen, king, ace.
+ Suits = spades, hearts, clover, diamond.
+ PointValue = 2, 3, 4, 5, 6, 7, 8 ,9, 10, 10, 10, 10, 11
+ 4.The order of the ranks and pointvalue array matters because we need to pair the pointvalues to the right rank cards as they are matched together
+ by their position in their respective arrays.
+ 
+ Activity 3
+ 
+ 1. public static String flip(){
+   if (Math.random() <= 0.66){
+      return "heads";
+   else {
+      return "tails";
+   }
+ }
+
+ 2. public static boolean arePermutations(int[] kevin, int[] anotherkevin){
+    for (int i = 0; i < kevin.length; i++){
+       for (int j = 0; j < anotherkevin.length, j++){
+           if (kevin[i] == anotherkevin[j]){
+              break;
+           }
+           if (j == anotherkevin.length - 1){
+             return false;
+           }
+       }
+    }
+    return true;
+}
+
+ 3. 1 and 2. 1 would switch the places of 1 and 4, and 2 would switch the places of 2 and 3.
+
+
+ Activity 5
+ 
+ Buggy1: isEmpty()
+    - When testOneCard is run, a card is dealt using deal(), which decreases the size of the deck from 1 to 0 before returning the card at index 0.
+    - Then testEmpty is run on the deck of size 0, testEmpty also deals a card with deal(), but because size is 0, the method attempts to get a card at index -1
+    - Normally, this wouldn't happen because if size is 0 / isEmpty(), then deal() just returns null
+    - But in this case, deal() proceeds, so something is wrong with isEmpty()
+
+ Buggy2: maybe the Deck constructor?
+    - There's doesn't look to be anything else it could be, given how soon the error occurred
+    - the size of the deck was probably set incorrectly
+    - The line in which size takes the value of the length of the card list might have been placed before the cards were added
+
+ Buggy 3: shuffle()
+    - The for loop in shuffle() might have the wrong comparator (i.e. running the loop while k < 0), making the loop not run at all
+
+ Buggy4: deal()
+    - isEmpty() seems to run fine, since the assertion that deck d, with size 1 is not empty, is true
+    - deal() should returns null if the deck is empty
+    - if nothing is worng with isEmpty(), then the return null statement in deal() might be placed such that it runs regardless of if isEmpty() is true or false
+
+ Activity 6
+
+ 1. 5 of hearts + 6 of clubs
+    6 of clubs + 5 of clubs
+
+ 2. Yes because if the deck is empty, then the cards remaining on the board must be removable, and the only way to remove 3 cards is a JQK trio
+
+ 3. It would be best to go with plays that diversify the cards on board, so that there is a higher chance of getting a match. 
+ This means JQK trios should be prioritized because they open up the most space. Then it would be best to remove pairs of cards that have duplicates on the board
+
+Activity 7
+1. A deck of cards and a board to place the cards on, so for instance variables, we would need a Deck to draw from, and an array of Cards to represent the board
+2. 
+    - Shuffle the deck, and then pass out 9 cards
+    - Have the player select 2 or 3 cards
+    - Check if that set of cards either sums up to 11, or is a trio of jack, queen, king
+    - If they do, then remove the cards and replace them with new ones from the deck
+    - If the deck runs out of cards, then the player wins
+    - If point the player is unable to remove cards, the player loses
+3. It's missing code for isLegal, anotherPlayIsPossible, containsPairSum11, and containsJQK, but if those were filled out, then it looks like it would work
+4. 
+    a) dealMyCards() is used in the constructor for ElevensBoard and in newGame()
+    b) isLegal() and anotherPlayIsPossible() because both need to check card combinations
+    c) look at README
+    d) public static void printCards(ElevensBoard board) {
+        List<Integer> cIndexes = board.cardIndexes()
+            for (Integer i : cindexes) {
+                System.out.println(cardAt(i));
+            }
+        }
+    e) anotherPlayIsPossible() needs to run cardIndexes() so it can find and check every possible card combination. isLegal() just has to check if its given combination is legal
+
+
+1. Elevens, Tens, and Thirteens all involve selecting a pair of cards that sum up to a specific number. Each of them also has a special case,
+where you can remove more than 2 cards. Each of them also has a different board size. 
+2. ElevensBoard inherits from Board, and can use Board's constructor with super(). Then ElevensBoard can enter its own values into Board's constructor
+3. isLegal and anotherPlayisPossible cover differences in how cards can be selected and removed, which is basically all that's different between variations.
+The board size shouldn't be a problem since it can be changed in each variation's constructor
+
+Activity 9
+1. size() is not an abstract method because the function is the same across different size boards: return the size of the board
+2. selecting and replacing cards is the same for all boards. The legality of the selection will differ between Elevens and Thirteens, but the abstract method isLegal exists
+3. using an interface would still allow for polymorphism for isLegal and anotherPlayisPossible, and the game would work just fine, since we have to define those methods differently 
+in each variation of the game. An interface would ensure that those methods exist, which would be helpful if we forget or something
