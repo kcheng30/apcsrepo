@@ -1,0 +1,15 @@
+FROGHATS: Salaj Rijal, Kevin Cheng, Alif Rahman
+APCS
+HW 85 -- Leon Leonwood Stack -- Creating a AL and LL implementation of Stack
+2022-03-30
+time spent: .2 hours
+
+DISCO:
+-we dont need any instance variables besides the respective Object (AL or LL)
+-we are basically creating a wrapper class (we just use the functionality of LL or AL to help us)
+
+QCC:
+-why is there no initcapacity?
+-why was there a Z in the main method? Was there a way we could have used that or was taht a 
+temp placeholder?
+-is LL Stack or AL Stack better? Our guess right now is LL Stack because AL's remove is O(n)
