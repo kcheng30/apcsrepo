@@ -1,4 +1,12 @@
 /*
+Team Phonebooth :: Yat Long Chan, Weichen Liu, Kevin Cheng
+APCS
+LAB08 -- America's Next Top Data Scientist
+2022-04-05
+time spent: 1 hour
+*/
+
+/*
  Represents information about a NWS weather station
 */
 
@@ -20,6 +28,10 @@ public class WeatherStation {
    /* Produce the id of this station */
    public String getId() { 
       return id;
+   }
+
+   public double getLat() {
+      return lat;
    }
    
    /* Produce the name of this station */

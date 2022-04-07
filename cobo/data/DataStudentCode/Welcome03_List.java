@@ -1,4 +1,12 @@
 /*
+Team Phonebooth :: Yat Long Chan, Weichen Liu, Kevin Cheng
+APCS
+LAB08 -- America's Next Top Data Scientist
+2022-04-05
+time spent: 1 hour
+*/
+
+/*
  * Arrays of objects
  */
 
@@ -23,5 +31,22 @@ public class Welcome03_List {
             System.out.println("  " + ws.getId() + ": " + ws.getName());
          }
       }
+
+   double lowest = allstns.get(0).getLat();
+      String name = allstns.get(0).getName();
+
+      for (WeatherStation ws : allstns) {
+         double lat = ws.getLat();
+
+         if (lat > 0 && lat <= lowest) {
+            lowest = lat;
+            name = ws.getName();
+         } else if (lat < 0 && lat <= lowest) {
+            lowest = lat;
+            name = ws.getName();
+         }
+      }
+         System.out.println("The southern most weeather station is " + name);
+
    }
 }

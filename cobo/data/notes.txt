@@ -2,18 +2,74 @@ Team Phonebooth :: Yat Long Chan, Weichen Liu, Kevin Cheng
 APCS
 LAB08 -- America's Next Top Data Scientist
 2022-04-05
-time spent: <elapsed time in hours, rounded to nearest tenth>
+time spent: 1 hour
 
 
 DISCO
+Use -d to place class files in specific directory
 
 
 QCC
+Why does compiling Welcome03_List not work from upper level of tree?
 
 
-<TNPG>'s CSV FLOW:
-<insert your description of your tools and workflow in creating, editing CSV files>
+Activity 1
+1. Youtube.com / Classroom.stuy.edu
 
+2. Both take age and name
 
-TRUBZ
-<this lab involves using tools that are likely to introduce hiccups; log any troubleshooting issues here>
+3. It means having fixed boundaries or limits. Data files have fixed boundaries on the information they collect.
+
+4. Look at the data in the column and determine which data type is best for it.
+
+5. health / sports
+
+6. Who is the best basketball player? How can I lose more weight?
+
+7. done
+
+8. None / Larger data sets would not be impacted as much by outliers. 
+
+9. I guess collecting age on youtube helps youtube provide the right content for the viewers. 
+
+10. No, maybe it's when we fill out surveys for them. 
+
+11. No, because there is never enough privacy.
+
+Activity 2
+1. Cereal
+
+2. Which cereal is better?
+
+3. public class Cereal
+
+4. 14 instance variables
+
+5. rating - double
+   sugar - int
+   
+6. done
+
+7. done
+
+8. Which cereal is sweeter?
+
+9. Which cereal contains more protein?
+
+10. Add an instance variable named fat with type int. 
+
+Activity 3
+
+1. Atlanta, Hartsfield Intl Airport. 57.0 F
+
+2. PADK. Adak Island, ADak Airport, Alaska, 33.0 F
+
+4. 3 Objects
+
+5. longitude
+
+6. Pago Pago, AS, Samoa
+
+7. sort weather stations by temp
+
+8. another inst var in WeatherStations and another loop in Welcome03_List.

@@ -14,3 +14,8 @@ $ java -classpath .:path/tosinbad.jar Driver
 
 411 on sinbad 
 https://berry-cs.github.io/sinbad/install-java
+
+
+Team Phonebooth :: Yat Long Chan, Weichen Liu, Kevin Cheng
+
+We had more trouble on this cobo lab than the others mainly from trying to figure out -classpath.

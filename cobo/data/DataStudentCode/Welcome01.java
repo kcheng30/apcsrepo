@@ -1,3 +1,12 @@
+/*
+Team Phonebooth :: Yat Long Chan, Weichen Liu, Kevin Cheng
+APCS
+LAB08 -- America's Next Top Data Scientist
+2022-04-05
+time spent: 1 hour
+*/
+
+
 import core.data.*;
 
 public class Welcome01 {
