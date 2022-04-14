@@ -1,11 +1,22 @@
 //TNPG: Froghats 
 //Roster: Alif Rahman, Salaj Rijal, Kevin Cheng
 //APCS
-//HW90 -- Swabbing the Deque
-//2022-04-12
-//time spent: .5 hours
+//HW91 -- Deque the Halls
+//2022-04-13
+//time spent: 1 hour
 
-import java.util.LinkedList;
+/*
+DISCO:
+- Turns out LinkedList already implements Deque, so all we did was "pass-thru" the necessary LinkedList methods.
+
+QCC:
+- Are we doing this right?
+- What other functionality should we add to our Deque?
+- What are some good names for the interface methods? Should they be the same as stated in the API?
+*/
+
+
+import java.util.*;
 
 public class Deck<T> implements Deque<T>{
 
@@ -13,11 +24,15 @@ public class Deck<T> implements Deque<T>{
 
     //remove the first element
     public T removeFirst(){
+	if ( isEmpty() )
+		throw new NoSuchElementException();
         return wrapped.removeFirst();
     }
 
     //remove the last element
     public T removeLast(){
+	if ( isEmpty() )
+		throw new NoSuchElementException();
         return wrapped.removeLast();
     }
 
@@ -52,49 +67,24 @@ public class Deck<T> implements Deque<T>{
         return size() <= 0;
     }
 
-    //test cases
-    public static void main(String[] args) {
-        
-        Deck<String> deck = new Deck<String>();
-
-        deck.addFirst("a");
-        deck.addFirst("b");
-        deck.addFirst("c");
-
-        deck.addLast("x");
-        deck.addLast("y");
-        deck.addLast("z"); 
-
-        //remove from end
-        System.out.println("Remove from end: ");
-        while ( ! deck.isEmpty() ) System.out.print( deck.removeLast() + " " );
-        
-        deck.addFirst("a");
-        deck.addFirst("b");
-        deck.addFirst("c");
-
-        deck.addLast("x");
-        deck.addLast("y");
-        deck.addLast("z"); 
-
-        //remove from beginning
-        System.out.println("\nRemove from beginning: ");
-        while ( ! deck.isEmpty() ) System.out.print( deck.removeFirst() + " " );
-
-        //shuffle the order up
-        deck.addFirst("a");
-        deck.addLast("x");
-
-        deck.addFirst("b");
-        deck.addLast("y");
-        
-        deck.addFirst("c");
-        deck.addLast("z"); 
-
-        //remove from beginning
-        System.out.println("\nRemove from beginning w/ a twist: ");
-        while ( ! deck.isEmpty() ) System.out.print( deck.removeFirst() + " " );
-
+    //remove first but return null instead of error when empty
+    public T pollFirst() {
+        try   {
+            return removeFirst();
+        }
+	    catch ( Exception e )	 {
+            return null;
+        }
     }
+    
+    //remove first but return null instead of error when empty
+	public T pollLast() {
+	    try {
+		return removeLast();
+		    }
+	    catch ( Exception e ) {
+		    return null;
+	  }
+	   }
 
 }

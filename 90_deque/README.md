@@ -1,7 +1,11 @@
 # FROGHATS PRESENTS DEQUE:
 **ROSTER:** Alif Rahman, Salaj Rijal, Kevin Cheng
 
-## CURRENT IMPLEMENTED:
+**Design Decisions:** We decided to create a wrapper class for LinkedList to create an interface of Deque because 
+it already had the functionality that we were looking for, all we had to do was "pass thru" the methods. Additionally,
+LinkedList already implements Deque which made things a whole lot easier.
+
+## OUR IMPLEMENTATION:
 * public T removeLast()
 * public T removeFirst()
 * public void addFirst(T)
@@ -11,12 +15,10 @@
 * public int size()
 * public boolean isEmpty()
 
+* public T pollFirst();
+* public T pollLast();
+
 ##  TO DO LIST:
-* Make more test cases
-* Create a limit to the size of queue (size)
-* Learn what offer means in terms of a queue
-* Implement offerFirst(T) and offerLast(T)
-* Learn what poll means in terms of a queue
-* Implement pollFirst() and pollLast()
+* We finished everything :)
 
 
