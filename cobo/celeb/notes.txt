@@ -1,0 +1,62 @@
+// Team BrainForked (Gloria Lee, Jack Chen, Kevin)
+// APCS pd8
+// L09: Some Folks Call It A Charades
+// 2022-04-26t
+// time spent: 1.5 h
+
+DISCO:
+- create a distinction between the logic behind the code and the execution/functionality of it
+- This was a refresher on inheritance, subclasses, superclasses, super() and overriding methods 
+- Polymorphism = important concept 
+
+QCC:
+- How 2 radio?
+- How 2 make GUI work?
+- Timer using sleep?
+
+Activity 1
+
+1. Possible classes: Game class, Celebrity class, Player class
+2. Info that might be needed in game class: points of each team (to determine win),
+    a timer function, checking function, shuffle hat if needed, display current game info stats
+    (how many still in hat)
+3. Possible behavior/methods for Game class:
+    pickCeleb, setTimer, guess, updateScore, endRound, play, checkGuess
+4. updateScore, setTimer, or checkGuess would be made into methods. They have clear, useful
+    functions in the game and you can easily imagine what params they would take and what they would return
+5. the play method would first set a timer, then pick a celeb from hat, then prompt guessing until a correct celeb was found
+    or time ran out, updating the score with each celeb picked.
+6. No information/behavior would be necessary, but it would be helpful/logical that all objects would be able to return
+    a list of their attributes/behaviors like how you can get that from looking at an object in real life
+
+Activity 2
+1. A constructor in a class is code that is executed whenever a new instance of a class is made. Depending on the constructor,
+    it could include params that will be set as attributes for that object.
+2. Constructor heading: public ClassName(params if needed)
+3. name and description/clues
+4. returnName, returnDescription, answerCheck
+5. You might have two constructors because you first created a constructor with no parameters and then you
+    overrode it to create a constructor with parameters. The default constructor would look like public Celebrity(){}.
+
+Activity 3
+2. The celeb list would be private.
+3. The gameCelebrity should also be private
+12. The CelebrityGame class handles interaction with the Celebrity objects.
+13. The rest of the GUI only has knowledge of the Celebrity name/clue or whether or not
+    the given guess matched.
+    
+Activity 4
+
+1. ClassName: CelebrityActor
+    Attributes: Same as all other celebrities
+    Type: Celebrity
+    Behaviors: same as all other celebrities
+    Return Type: same as return type in Celebrity methods
+
+  17. We identify an overridden method if there is already an existing method of the same name 
+      in the parent class, but with different functionality/code. 
+  18. To send info from the subclass to the superclass, we can use get/set accessor methods to get and set 
+      any private instance variables of the subclass 
+  19. super() or extends
+  20. The method executed would be the superclass version of the method because 
+      java treats the subclass as the type of the ArrayList, which is the superclass.
