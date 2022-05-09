@@ -1,0 +1,94 @@
+Team BrainForked: Gloria Lee, Jack Chen, Kevin Cheng
+APCS pd08
+HW94 -- reverse engineering
+2022-05-06f
+time spent: 1 hrs
+
+
+DISCO
+------------------------------------------------
+* Pre-order traversal's first element is the root of the tree
+* Post-order traversal's last element is the root of the tree
+* In-order traversal's root element is between and separates the left and right subtrees. 
+* Drawing out tree is helpful.
+* 1 to 1 is not the same as "onto"
+================================================
+
+
+QCC
+------------------------------------------------
+* Recursion is being used. What is base case? Node with no children? 
+* Post and pre order traversal does not have unique tree solution?
+================================================
+
+
+HOW KEEN ARE YOUR POWERS OF OBSERVATION?
+------------------------------------------------
+Q: For a given binary tree, how many unique pre-order traversals are there?
+A: There is one unique pre-order traversal.
+
+Q: For a given binary tree, how many unique in-order traversals are there?
+A: There is one unique in order traversal
+
+Q: For a given binary tree, how many unique post-order traversals are there?
+A: There is one unique post order traversal
+
+Q: For a given traversal, how many unique trees could have produced it?
+A: 3 traversals, one for each traversal type
+
+Q: Given a pre-order traversal, what can you infer about its tree?
+A: The first element of the traversal would be the root of the tree. 
+
+Q: Given a post-order traversal, what can you infer about its tree?
+A: The last element of the traversal would be the root of the tree.
+
+Q: What does "1-to-1" mean?
+A: Each element of set A, for example, maps to a unique element in set B.
+
+Q: What does "onto" mean?
+A: Multiple elements from set A can map to a single element in set B as long as each 
+element in B corresponds with an element from A. 
+
+================================================
+
+
+ALGO for regrowTree
+------------------------------------------------
+givens: 
+
+* The tree is not null
+* The tree is a binary tree and doesnt breathe air 
+* At least two traversals of the tree are given (one in, one post, one pre etc.) 
+* Possible a pre-order traversal and a in-order traversal
+
+procedure:
+
+* If given a post and in:
+  The last element of the post-order traversal would be the root. 
+  Divide the in-order traversal along the root to obtain the left and right subtrees. 
+  
+  UOG D ALS => in-order 
+  UOG => Look at this left subtree part in the post order traversal way 
+  UGO => O is the root of the left subtree. Look at this one in the in-order way 
+  U O G => in-order
+  U is the left subtree, G is the right subtree. Reached one element on a subtree, means they have no children. 
+
+
+
+* If given a pre and in: 
+  The first element in the pre order traversal is the root. 
+  Look left of root element in the in order trav for the left subtree. Treat this as a new tree 
+  The next element in pre order trav is the new root of the new left tree. Continue recursion 
+  until the first element of in order trav is reached. This signals bottom of tree has been reached.
+  Then look to next element in pre order for subsequent pair nodes. 
+  Treat the right subtree as a separate tree, repeat algo
+
+  UOG D ALS => in-order 
+  UOG => Look at this left subtree in the pre-order traversal way
+  OUG => The first element of a pre-order traversal is the root of that tree.
+  Divide UOG (pre-order traversal) into left and right subtrees/
+  U O G => in-order
+  U => The first element is the root of the tree. 
+  
+================================================
+(replicate the algo section above as many times as necessary for distinct algos)
