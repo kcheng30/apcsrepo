@@ -1,0 +1,24 @@
+Team BrainForked: Gloria Lee, Jack Chen, Kevin Cheng
+APCS pd08
+HW95: Algorithm as Data Structure
+2022-05-09m
+time spent: 1 hrs
+
+DISCO: 
+* The order in which you put how you process the left, right, and self matter a lot to each traversal method
+* BTS??
+* Once we wrote the algo for one of the prints, it got a lot easier to write the algos 
+  for the other two prints because they all follow the same basic recursion pattern except 
+  with different processing order. 
+* Helpful to use diagnostic print statements and go through each step of code by hand. 
+QCC:
+* set root value to 0 or set root as null?
+* 
+
+With L = level, d = depth, h = height
+1) a perfect binary tree has _____ nodes
+   (2^h) + (2^(h-1))+ ... + (2^0)
+2) at each level, a perfect binary tree has _____ nodes
+  2^h 
+3) height of a complete binary tree w/ n nodes is _____
+  (L - 1)
