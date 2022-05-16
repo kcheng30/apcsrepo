@@ -1,0 +1,14 @@
+Team BrainForked: Gloria Lee, Jack Chen, Kevin Cheng
+APCS pd08
+HW99: Some Are More Equal Than Others, Codified
+2022-05-12f
+time spent: 0.5 hrs
+
+DISCO:
+- ints are ordered from greatest to least because of the add method. It is easier to treat 0 as the highest prio because you know it is the absolute lowest. 
+- We should not remove from the front of the array because that would require everything to shift over. That is why the highest prio goes to the back of the list,
+where peekMin will show the highest prio in the list and also the last element in the list.
+
+QCC:
+- What if we are putting other data types in the ArrayList?
+- Use of compareTo method and overwriting it in order to implement priority arraylist with custom objects?
