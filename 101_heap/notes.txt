@@ -1,0 +1,15 @@
+Team BrainForked: Gloria Lee, Jack Chen, Kevin Cheng
+APCS pd08
+HW101: Heap o'Trouble
+2022-05-16T
+time spent: 0.5 hrs
+
+DISCO:
+* The remove algo of BST doesn't work with heaps because there's no guarantee that the children of a node will be greater than their "uncle/aunt" 
+* Instead, we chose to use a recursive approach with remove that would have worked with BST as well, but might not be as efficient because of all the switcherooing
+* BST is no heap, it does not have a consistent key ):< 
+* Values do not go in any specific side of the tree like in a BST but it is still left justified 
+QCC: 
+* Would it be possible to have multiple of the same value in one tree? (probably yes but)
+* How to prevent an add algo that just causes a heavily skewed tree? 
+* Our algo makes our tree very line ): ): 

@@ -1,0 +1,27 @@
+Team BrainForked: Gloria Lee, Jack Chen, Kevin Cheng
+APCS pd08
+HW101: Heap o'Trouble
+2022-05-16T
+time spent: 0.5 hrs
+
+how to insert trash into the heaping pile of trash :(
+Preconds:
+* The tree is not null
+* The insertion object is comparable 
+
+1. there is a tree. All children of a tree are greater than in. (minHeap)
+2. There is an int that you want to insert into the tree.
+
+3. Using pre order traversal, traverse through tree while piggybacking using a front and a back tracker 
+
+  If the insertion int is greater than the front node, continue to traverse through the tree. Set the
+  front node equal to the next node down and the back node to the current node you are on. 
+
+  If the insertion int is less than the front node, create a new node with root of insertion int and set left to the front node.
+  Then, set left or set right of the back node to the new node depending on whether front was a left or right child.
+  
+
+
+  
+  
+

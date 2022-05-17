@@ -1,0 +1,18 @@
+Team BrainForked: Gloria Lee, Jack Chen, Kevin Cheng
+APCS pd08
+HW101: Heap o'Trouble
+2022-05-16T
+time spent: 0.5 hrs
+
+how to remove trash from a trash heap :)
+Preconds:
+* The tree is not null
+* The insertion object is comparable 
+* parameter is int you want to remove
+  
+1. You have tree. Tree exists. Chop tree. Ooga booga. Fire. 
+
+1. You have a tree. Tree exists. You are forced to build an algo for it. Not ooga booga fire ): 
+2. Traverse the tree with a front and back node until you happen upon the node you want to remove. front = removal node, back = parent node
+3. If the removal node has two children, compare the values of the two childrens. Front node's root value takes on the value of that lesser child. 
+Remove the lesser child using this same algo. This works recursively until you remove a lesser child that is a leaf.
