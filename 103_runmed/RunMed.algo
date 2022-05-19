@@ -1,0 +1,22 @@
+Team BrainForked: Gloria Lee, Jack Chen, Kevin Cheng
+APCS pd08
+HW101: Heap o'Trouble
+2022-05-16T
+time spent: 1 hrs
+
+1) If nextvalue < root of maxHeap, add to maxHeap
+2) If heaps have a size diff of more than 2, remove from the larger heap and add it to the smaller heap (done in add method)
+3) Find median at any time by: 
+  a) if heap sizes equal, median is the mean of roots
+  b) if heap sizes !equal, median is the root of the larger heap 
+- the root of the maxHeap represents a sorting reference value. Everything in the maxHeap will be <= that root value. Everything in the minHeap will be greater than that root value of the maxHeap.
+- Therefore, imagine if the number stream became sorted in increasing order and the root of the maxHeap divides that sorted stream into two sides. The minHeap represents the right side with the root being the min of the right side. The maxHeap represents the left side with the root being the max of the left side. 
+- The root of the minHeap will always be the value to the right of the root of the maxHeap if the number stream were sorted in increasing order.(The two roots will always be adjacent to one another)
+- As a result, you want to balance out the left and the right sides so that the roots of the two heaps are located in the middle of the sorted number stream. 
+- By removing the root of the heap of greater size and adding that root's value to the other heap until the heaps have sizes within 1 of each other, we are essentially moving the middle marker (minHeap / maxHeap roots)  to the true middle of the sorted number stream by changing the sizes of the right/left side.
+
+DISCO:
+* Heaps ): 
+* BUt at least it worked :) 
+QCC:
+* why le file so ridiculously big 
